@@ -2,6 +2,7 @@ $plum: #4b215d;
 $light_purple: #454582;
 $navy_blue: #15253d;
 $faded_blue: #a7bcdc;
+$hero: #e6eaf3;
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,500&display=swap");
 
@@ -21,8 +22,18 @@ $faded_blue: #a7bcdc;
 body {
   display: grid;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.hero {
+  z-index: -1;
+  position: fixed;
+  height: 80vh;
+  width: 100vw;
+  background-color: $hero;
+  top: 0;
+  left: 0;
 }
 
 .clinic_name {
@@ -40,11 +51,36 @@ body {
   margin: 3em 0;
   background-color: $navy_blue;
   border-radius: 20px;
-  padding: 1.5em;
+  padding: 3em;
+  display: grid;
   input {
+    padding: 0.6em;
+    font-size: 1.5em;
     color: white;
+    background-color: $light_purple;
+    border-radius: 20px;
+    border: none;
   }
 }
-.input-container {
+.input_container {
   display: grid;
+}
+button {
+  width: 40%;
+  padding: 0.5em 0.3em;
+  font-size: 1.5em;
+  margin: 1em auto 0.3em auto;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: $faded_blue;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  right: -22%;
+  transform: translateY(-50%);
+  width: 50vw;
+  z-index: -1;
 }

@@ -3,8 +3,8 @@ import Input from "./Input";
 
 const Form = () => {
   const [patientName, setPatientName] = useState("");
-  const [patientID, setPatientID] = useState(0);
-  const [patientContact, setPatientContact] = useState(0);
+  const [patientID, setPatientID] = useState("");
+  const [patientContact, setPatientContact] = useState("");
   const [patientGender, setPatientGender] = useState("");
   return (
     <Fragment>
@@ -39,6 +39,7 @@ const Form = () => {
             placeholder="Patient Gender"
           />
         </div>
+        <button>Confirm Details</button>
       </div>
     </Fragment>
   );
