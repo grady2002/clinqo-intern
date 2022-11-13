@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
+import Switcher from "./components/Switcher";
+import Form from "./components/Form";
+import "./App.scss";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <h3 className="clinic_name">Clinic Name</h3>
+      <div className="flex switch_container">
+        <h4>Patient with prescription</h4>
+        <Switcher />
+        <h4>Access patient report</h4>
+      </div>
+      <Form />
+    </Fragment>
   );
-}
+};
 
 export default App;
